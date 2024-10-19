@@ -1,0 +1,82 @@
+Cryptocurrency Prices Dashboard
+
+
+Overview
+The Cryptocurrency Prices Dashboard is a web application that displays real-time data of the top 10 cryptocurrencies by market capitalization. The data is fetched from the CoinGecko API, allowing users to view details such as the name, symbol, current price, and total volume of each cryptocurrency. The dashboard also provides functionalities for searching, sorting, and filtering the data.
+
+Features
+Fetch data from the CoinGecko API using both .then and async/await methods.
+Display cryptocurrency data in a tabular format.
+Search functionality to filter cryptocurrencies by name or symbol.
+Sorting options:
+Sort by market capitalization.
+Sort by 24-hour percentage change.
+Technologies Used
+HTML for the structure of the webpage.
+CSS for styling the webpage and making it visually appealing.
+JavaScript (ES6) for fetching data, handling events, and rendering the table.
+Setup Instructions
+Prerequisites
+A modern web browser (Chrome, Firefox, Edge, etc.)
+Basic knowledge of HTML, CSS, and JavaScript.
+Installation
+Download or clone the project repository to your local machine:
+bash
+Copy code
+git clone https://github.com/your-repository/crypto-prices-dashboard.git
+Navigate to the project directory:
+bash
+Copy code
+cd crypto-prices-dashboard
+Open the index.html file in your browser to view the application.
+Project Structure
+The project consists of three main files:
+
+index.html: The main HTML file that provides the structure of the webpage.
+styles.css: The CSS file that styles the webpage.
+scripts.js: The JavaScript file that contains the logic for fetching data, rendering the table, and handling events.
+Code Explanation
+HTML (index.html)
+Contains the basic layout, including a header (<h1>), input field for searching, buttons for sorting, and a table for displaying the cryptocurrency data.
+The <div class="controls"> wraps the search bar and buttons, providing better layout control.
+CSS (styles.css)
+Body Styling: Dark theme background with white text to match the provided design.
+Table Styling: Added styles for borders, padding, and alternating row colors to improve readability.
+Button and Search Bar Styling: Added consistent styling for the input field and buttons, including hover effects.
+JavaScript (scripts.js)
+Fetching Data:
+fetchCryptoDataWithThen(): Fetches data using the .then method.
+fetchCryptoDataWithAsync(): Fetches data using the async/await syntax.
+Rendering the Table:
+renderCryptoTable(data): Dynamically generates the table rows and inserts the data.
+Search Functionality:
+Filters the displayed data based on the user's input.
+Sorting Functionality:
+Sorts the data by market cap or percentage change.
+Event Listeners:
+Attached to the search input and buttons to handle user interactions.
+How to Use the Dashboard
+Open the application by launching the index.html file in your web browser.
+View the cryptocurrency data: The table will initially display the top 10 cryptocurrencies by market capitalization.
+Search for a specific cryptocurrency:
+Type the name or symbol of a cryptocurrency in the search bar.
+The table will update to show matching results.
+Sort the data:
+Click "Sort by Market Cap" to sort the table in descending order based on market cap.
+Click "Sort by % Change" to sort the table in descending order based on the 24-hour price change percentage.
+API Information
+The project uses the CoinGecko API to fetch real-time data:
+
+Endpoint: https://api.coingecko.com/api/v3/coins/markets
+Parameters:
+vs_currency: Specifies the currency (USD).
+order: Orders the results by market cap.
+per_page: Number of results per page (10).
+page: Page number (1).
+sparkline: Set to false to exclude sparkline data.
+
+Potential Improvements
+Add pagination to display more than 10 cryptocurrencies.
+Include additional columns, such as 24-hour high/low prices, market dominance, etc.
+Responsive Design: Optimize the layout for smaller screens (e.g., mobile devices).
+Error Handling: Display user-friendly messages if the API request fails.
